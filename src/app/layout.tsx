@@ -23,6 +23,7 @@ export default function RootLayout({
           <Navbar />
           {children}
         </NextUIProvider>
+
       </body>
       <link rel="icon" href="youtube.svg" />
     </html>

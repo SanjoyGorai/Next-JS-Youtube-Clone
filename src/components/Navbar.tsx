@@ -12,6 +12,7 @@ import Avatar from 'react-avatar';
 import { Switch } from "@nextui-org/react";
 import { MoonIcon } from "./MoonIcon";
 import { SunIcon } from "./SunIcon";
+import { Tooltip } from "@nextui-org/tooltip";
 
 export default function Navbar() {
     return (
@@ -33,21 +34,23 @@ export default function Navbar() {
                 <button className={`  `}>
                     <BiSearch className={`  w-16 bg-white text-gray-500 border-gray-300 border-r border-y rounded-r-full p-2 size-10 hover:bg-gray-200 `} />
                 </button>
+
                 <BsFillMicFill className='ms-5 p-3 size-10 bg-gray-300 rounded-full
                  hover:bg-gray-300 cursor-pointer' />
+
+
             </div>
 
             <div className='grid grid-cols-4 items-center space-x-2 me-0'>
-                <Switch
-                    defaultSelected
-                    size="lg"
-                    color="success"
-                    startContent={<SunIcon />}
-                    endContent={<MoonIcon />}
-                >
-                    Dark mode
-                </Switch>
-                <Switch defaultSelected aria-label="" />
+                <Tooltip content="I am a tooltip">
+                    <Switch
+                        defaultSelected
+                        size="lg"
+                        color="success"
+                        startContent={<SunIcon />}
+                        endContent={<MoonIcon />}
+                    />
+                </Tooltip>
 
                 <BiVideoPlus className='size-10 p-2 cursor-pointer rounded-full hover:bg-gray-300' />
                 <BiBell className='size-10 p-2 rounded-full cursor-pointer hover:bg-gray-300' />

@@ -9,6 +9,9 @@ import { BsFillMicFill } from "react-icons/bs";
 import { BiBell, BiSearch, BiSolidCameraPlus } from "react-icons/bi";
 import { BiVideoPlus } from "react-icons/bi";
 import Avatar from 'react-avatar';
+import { Switch } from "@nextui-org/react";
+import { MoonIcon } from "./MoonIcon";
+import { SunIcon } from "./SunIcon";
 
 export default function Navbar() {
     return (
@@ -35,7 +38,17 @@ export default function Navbar() {
             </div>
 
             <div className='grid grid-cols-4 items-center space-x-2 me-0'>
-                {/* <CustomizedThemeSwitch /> */}
+                <Switch
+                    defaultSelected
+                    size="lg"
+                    color="success"
+                    startContent={<SunIcon />}
+                    endContent={<MoonIcon />}
+                >
+                    Dark mode
+                </Switch>
+                <Switch defaultSelected aria-label="" />
+
                 <BiVideoPlus className='size-10 p-2 cursor-pointer rounded-full hover:bg-gray-300' />
                 <BiBell className='size-10 p-2 rounded-full cursor-pointer hover:bg-gray-300' />
                 <Avatar src={'user'} size="35" round={true} className=' cursor-pointer ml-3' />

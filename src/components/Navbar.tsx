@@ -38,7 +38,6 @@ export default function Navbar() {
                 <BsFillMicFill className='ms-5 p-3 size-10 bg-gray-300 rounded-full
                  hover:bg-gray-300 cursor-pointer' />
 
-
             </div>
 
             <div className='grid grid-cols-4 items-center space-x-2 me-0'>
